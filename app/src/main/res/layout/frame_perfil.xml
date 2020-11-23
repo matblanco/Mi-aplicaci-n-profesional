@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/espacio_normal">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:isScrollContainer="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/icono_grande"
+                android:layout_height="@dimen/icono_grande"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_perfil"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary"
+                android:layout_marginTop="@dimen/espacio_normal"
+                android:layout_marginBottom="@dimen/espacio_normal"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/icedula"
+                    android:layout_width="@dimen/icono_pequeño"
+                    android:layout_height="@dimen/icono_pequeño"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/espacio_minimo"
+                    android:src="@drawable/ic_cedula" />
+
+                <TextView
+                    android:id="@+id/tcedula"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/icedula"
+                    android:layout_toRightOf="@id/icedula"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorNegro" />
+
+                <TextView
+                    android:id="@+id/tnit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tcedula"
+                    android:layout_marginTop="@dimen/espacio_minimo"
+                    android:layout_toRightOf="@id/icedula"
+                    android:text="Cedula"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorTextoInfo" />
+
+            </RelativeLayout>
+
+
+            <!--
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilnit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:hint="Cedula"
+                app:startIconDrawable="@drawable/ic_cedula"
+                app:startIconContentDescription="Cedula"
+                app:endIconMode="none"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tmtitulo"
+                app:layout_constraintVertical_bias="0.0" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiecedula"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:maxLines="1"
+                    android:enabled="false"
+                    android:textColor="@color/material_on_background_emphasis_medium"
+                    android:background="@color/colorTransparente"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:layout_marginTop="@dimen/espacio_normal">
+
+                <ImageView
+                    android:id="@+id/inombre"
+                    android:layout_width="@dimen/icono_pequeño"
+                    android:layout_height="@dimen/icono_pequeño"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/espacio_minimo"
+                    android:src="@drawable/ic_nombre" />
+
+                <TextView
+                    android:id="@+id/tnombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/inombre"
+                    android:layout_toRightOf="@id/inombre"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorNegro" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tnombre"
+                    android:layout_marginTop="@dimen/espacio_minimo"
+                    android:layout_toRightOf="@id/inombre"
+                    android:text="Nombre"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorTextoInfo" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rgenero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:layout_marginTop="@dimen/espacio_normal">
+
+                <ImageView
+                    android:id="@+id/igenero"
+                    android:layout_width="@dimen/icono_pequeño"
+                    android:layout_height="@dimen/icono_pequeño"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/espacio_minimo"
+                    android:src="@drawable/ic_genero" />
+
+                <TextView
+                    android:id="@+id/tgenero"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/igenero"
+                    android:layout_toRightOf="@id/igenero"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorNegro"  />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tgenero"
+                    android:layout_marginTop="@dimen/espacio_minimo"
+                    android:layout_toRightOf="@id/igenero"
+                    android:text="Genero"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorTextoInfo" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rfechan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:layout_marginTop="@dimen/espacio_normal">
+
+                <ImageView
+                    android:id="@+id/ifechan"
+                    android:layout_width="@dimen/icono_pequeño"
+                    android:layout_height="@dimen/icono_pequeño"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/espacio_minimo"
+                    android:src="@drawable/ic_fechan" />
+
+                <TextView
+                    android:id="@+id/tfechan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/ifechan"
+                    android:layout_toRightOf="@id/ifechan"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorNegro" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tfechan"
+                    android:layout_marginTop="@dimen/espacio_minimo"
+                    android:layout_toRightOf="@id/ifechan"
+                    android:text="Fecha de nacimiento"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorTextoInfo" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:layout_marginTop="@dimen/espacio_normal">
+
+                <ImageView
+                    android:id="@+id/icelular"
+                    android:layout_width="@dimen/icono_pequeño"
+                    android:layout_height="@dimen/icono_pequeño"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/espacio_minimo"
+                    android:src="@drawable/ic_celular" />
+
+                <TextView
+                    android:id="@+id/tcelular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/icelular"
+                    android:layout_toRightOf="@id/icelular"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorNegro" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tcelular"
+                    android:layout_marginTop="@dimen/espacio_minimo"
+                    android:layout_toRightOf="@id/icelular"
+                    android:text="Celular"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorTextoInfo" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:layout_marginTop="@dimen/espacio_normal">
+
+                <ImageView
+                    android:id="@+id/icorreo"
+                    android:layout_width="@dimen/icono_pequeño"
+                    android:layout_height="@dimen/icono_pequeño"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/espacio_minimo"
+                    android:src="@drawable/ic_correo" />
+
+                <TextView
+                    android:id="@+id/tcorreo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/icorreo"
+                    android:layout_toRightOf="@id/icorreo"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorNegro" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tcorreo"
+                    android:layout_marginTop="@dimen/espacio_minimo"
+                    android:layout_toRightOf="@id/icorreo"
+                    android:text="Correo"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorTextoInfo" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:layout_marginTop="@dimen/espacio_normal">
+
+                <ImageView
+                    android:id="@+id/idireccion"
+                    android:layout_width="@dimen/icono_pequeño"
+                    android:layout_height="@dimen/icono_pequeño"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/espacio_minimo"
+                    android:src="@drawable/ic_direccion" />
+
+                <TextView
+                    android:id="@+id/tdireccion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/idireccion"
+                    android:layout_toRightOf="@id/idireccion"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorNegro" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tdireccion"
+                    android:layout_marginTop="@dimen/espacio_minimo"
+                    android:layout_toRightOf="@id/idireccion"
+                    android:text="Dirección"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorTextoInfo" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:layout_marginTop="@dimen/espacio_normal">
+
+                <ImageView
+                    android:id="@+id/ilugar"
+                    android:layout_width="@dimen/icono_pequeño"
+                    android:layout_height="@dimen/icono_pequeño"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/espacio_minimo"
+                    android:src="@drawable/ic_ubicacion" />
+
+                <TextView
+                    android:id="@+id/tlugar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/ilugar"
+                    android:layout_toRightOf="@id/ilugar"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorNegro" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tlugar"
+                    android:layout_marginTop="@dimen/espacio_minimo"
+                    android:layout_toRightOf="@id/ilugar"
+                    android:text="Lugar"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorTextoInfo" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:layout_marginTop="@dimen/espacio_normal">
+
+                <ImageView
+                    android:id="@+id/icondición"
+                    android:layout_width="@dimen/icono_pequeño"
+                    android:layout_height="@dimen/icono_pequeño"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/espacio_minimo"
+                    android:src="@drawable/ic_condicion" />
+
+                <TextView
+                    android:id="@+id/tcondición"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/icondición"
+                    android:layout_toRightOf="@id/icondición"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorNegro" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tcondición"
+                    android:layout_marginTop="@dimen/espacio_minimo"
+                    android:layout_toRightOf="@id/icondición"
+                    android:text="Condición"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorTextoInfo" />
+
+
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary"
+                android:layout_marginTop="@dimen/espacio_minimo" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/espacio_minimo">
+
+                <TextView
+                    android:id="@+id/teditar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Editar perfil"
+                    android:padding="8dp"
+                    android:gravity="center_horizontal"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorPrimary"
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackground"/>
+
+                <TextView
+                    android:id="@+id/tcambiar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cambiar de contraseña"
+                    android:layout_marginTop="@dimen/espacio_minimo"
+                    android:padding="8dp"
+                    android:layout_below="@+id/teditar"
+                    android:gravity="center_horizontal"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorPrimary"
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackground"/>
+
+
+                <TextView
+                    android:id="@+id/tconfi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Configuración"
+                    android:layout_marginTop="@dimen/espacio_minimo"
+                    android:padding="8dp"
+                    android:layout_below="@+id/tcambiar"
+                    android:gravity="center_horizontal"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorPrimary"
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackground"/>
+
+                <TextView
+                    android:id="@+id/tsalir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cerrar sesión"
+                    android:layout_below="@+id/tconfi"
+                    android:layout_marginTop="@dimen/espacio_minimo"
+                    android:padding="8dp"
+                    android:gravity="center_horizontal"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorPrimary"
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackground"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

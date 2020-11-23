@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/espacio_normal"
+    tools:context=".ui.regsitro.TipoRegistroFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/loperador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/fondo_cuadro"
+            android:padding="@dimen/espacio_minimo"
+            android:foreground="?android:attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/ioperador"
+            android:layout_width="@dimen/icono_grande"
+            android:layout_height="@dimen/icono_grande"
+            android:src="@drawable/ic_operario"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Operador"
+            android:textColor="@color/colorPrimary"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lempresa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/espacio_normal"
+            android:background="@drawable/fondo_cuadro"
+            android:padding="@dimen/espacio_minimo"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/iempresa"
+                android:layout_width="@dimen/icono_grande"
+                android:layout_height="@dimen/icono_grande"
+                android:src="@drawable/ic_empresa"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Empresa"
+                android:textColor="@color/colorPrimary"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/espacio_normal"
+    tools:context=".ui.clientes.CrearClienteFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bcrear"
+            android:isScrollContainer="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/rtitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/iregistro"
+                        android:layout_width="@dimen/icono_pequeño"
+                        android:layout_height="@dimen/icono_pequeño"
+                        android:src="@drawable/ic_clientes" />
+
+                    <TextView
+                        android:id="@+id/ttitulo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/espacio_minimo"
+                        android:gravity="center_vertical"
+                        android:text="Nuevo cliente"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorTextoTitulo" />
+
+            </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espacio_normal"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/enit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:digits="0123456789"
+                        android:hint="NIT"
+                        android:inputType="number"
+                        android:padding="@dimen/espacio_minimo"
+                        android:selectAllOnFocus="true"
+                        android:maxLength="20"
+                        android:textColor="@color/colorPrimary"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+
+                    <EditText
+                        android:id="@+id/enombre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="Nombre"
+                        android:inputType="textPersonName"
+                        android:padding="@dimen/espacio_minimo"
+                        android:layout_marginTop="@dimen/espacio_minimo"
+                        android:selectAllOnFocus="true"
+                        android:maxLength="30"
+                        android:textColor="@color/colorPrimary"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+
+                    <EditText
+                        android:id="@+id/ecorreo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="Correo electrónico"
+                        android:inputType="textEmailAddress"
+                        android:padding="@dimen/espacio_minimo"
+                        android:layout_marginTop="@dimen/espacio_minimo"
+                        android:selectAllOnFocus="true"
+                        android:maxLength="50"
+                        android:textColor="@color/colorPrimary"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <EditText
+                        android:id="@+id/ecelular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="0123456789"
+                        android:gravity="center"
+                        android:hint="Celular"
+                        android:inputType="number"
+                        android:padding="@dimen/espacio_minimo"
+                        android:layout_marginTop="@dimen/espacio_minimo"
+                        android:selectAllOnFocus="true"
+                        android:maxLength="10"
+                        android:textColor="@color/colorPrimary"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+                    <EditText
+                        android:id="@+id/edireccion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="Dirección"
+                        android:inputType="textPostalAddress"
+                        android:padding="@dimen/espacio_minimo"
+                        android:layout_marginTop="@dimen/espacio_minimo"
+                        android:selectAllOnFocus="true"
+                        android:maxLength="50"
+                        android:textColor="@color/colorPrimary"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+
+                    <Spinner
+                        android:id="@+id/spais"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/espacio_minimo"
+                        android:popupBackground="@color/colorBlanco"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:background="@drawable/fondo_spiner"/>
+
+                    <Spinner
+                        android:id="@+id/sestado"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/espacio_minimo"
+                        android:popupBackground="@color/colorBlanco"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:background="@drawable/fondo_spiner"/>
+
+                    <Spinner
+                        android:id="@+id/sciudad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/espacio_minimo"
+                        android:popupBackground="@color/colorBlanco"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:background="@drawable/fondo_spiner"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+        <Button
+            android:id="@+id/bcrear"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/espacio_minimo"
+            android:background="@drawable/fondo_boton"
+            android:padding="@dimen/espacio_minimo"
+            android:text="Crear"
+            android:textAllCaps="false"
+            android:textColor="@color/colorBlanco"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>

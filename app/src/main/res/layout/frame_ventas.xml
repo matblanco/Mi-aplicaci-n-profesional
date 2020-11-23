@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/espacio_normal"
+    tools:context=".ui.ventas.VentasFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/lhistorial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/espacio_minimo"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/ihistorial"
+                android:layout_width="@dimen/icono_pequeño"
+                android:layout_height="@dimen/icono_pequeño"
+                android:src="@drawable/ic_bien"
+                android:layout_toLeftOf="@+id/tagregar" />
+
+            <TextView
+                android:id="@+id/thistorial"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="Historial"
+                android:layout_marginRight="@dimen/espacio_minimo"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_venta"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/lhistorial"
+            android:layout_marginTop="@dimen/espacio_minimo"/>
+
+
+        <TextView
+            android:id="@+id/tvacio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@color/colorBlanco"
+            android:gravity="center"
+            android:padding="@dimen/espacio_normal"
+            android:text="No tiene ninguna venta"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/colorTextoInfo" />
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>

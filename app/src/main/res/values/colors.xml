@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#198B62</color>
+    <color name="colorPrimaryDark">#00796B</color>
+    <color name="colorAccent">#4CAF50</color>
+    <color name="colorVariant">#339D59</color>
+
+    <color name="colorBlanco">#ffffff</color>
+    <color name="colorNegro">#000000</color>
+    <color name="colorTransparente">#00ffffff</color>
+    <color name="colorsemiTransparente">#BFffffff</color>
+    <color name="colorFondoGris">#E0E0E0</color>
+    <color name="colorIcono">#BDBDBD</color>
+    <color name="colorTextoInfo">#757575</color>
+    <color name="colorTextoTitulo">#212121</color>
+</resources>

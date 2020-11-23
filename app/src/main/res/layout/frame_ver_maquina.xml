@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/espacio_normal"
+    tools:context=".ui.maquinas.VerMaquinaFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bsiguiente"
+            android:isScrollContainer="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/icono_grande"
+                    android:layout_height="@dimen/icono_grande"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_maquina"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimary"
+                    android:layout_marginTop="@dimen/espacio_normal"
+                    android:layout_marginBottom="@dimen/espacio_normal"/>
+
+
+                <Spinner
+                    android:id="@+id/slista"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:popupBackground="@color/colorBlanco"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:background="@drawable/fondo_spiner"
+                    android:gravity="center_horizontal"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_marginTop="@dimen/espacio_normal">
+
+                    <ImageView
+                        android:id="@+id/inombre"
+                        android:layout_width="@dimen/icono_pequeño"
+                        android:layout_height="@dimen/icono_pequeño"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/espacio_minimo"
+                        android:src="@drawable/ic_nombre" />
+
+                    <TextView
+                        android:id="@+id/tnombre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/inombre"
+                        android:layout_toRightOf="@id/inombre"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorNegro" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tnombre"
+                        android:layout_marginTop="@dimen/espacio_minimo"
+                        android:layout_toRightOf="@id/inombre"
+                        android:text="Nombre"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorTextoInfo" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rmarca"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_marginTop="@dimen/espacio_normal">
+
+                    <ImageView
+                        android:id="@+id/imarca"
+                        android:layout_width="@dimen/icono_pequeño"
+                        android:layout_height="@dimen/icono_pequeño"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/espacio_minimo"
+                        android:src="@drawable/ic_marca" />
+
+                    <TextView
+                        android:id="@+id/tmarca"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/imarca"
+                        android:layout_toRightOf="@id/imarca"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorNegro"  />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tmarca"
+                        android:layout_marginTop="@dimen/espacio_minimo"
+                        android:layout_toRightOf="@id/imarca"
+                        android:text="Marca"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorTextoInfo" />
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rmodelo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_marginTop="@dimen/espacio_normal">
+
+                    <ImageView
+                        android:id="@+id/imodelo"
+                        android:layout_width="@dimen/icono_pequeño"
+                        android:layout_height="@dimen/icono_pequeño"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/espacio_minimo"
+                        android:src="@drawable/ic_fechan" />
+
+                    <TextView
+                        android:id="@+id/tmodelo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/imodelo"
+                        android:layout_toRightOf="@id/imodelo"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorNegro" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tmodelo"
+                        android:layout_marginTop="@dimen/espacio_minimo"
+                        android:layout_toRightOf="@id/imodelo"
+                        android:text="Modelo"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorTextoInfo" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_marginTop="@dimen/espacio_normal">
+
+                    <ImageView
+                        android:id="@+id/idescripcion"
+                        android:layout_width="@dimen/icono_pequeño"
+                        android:layout_height="@dimen/icono_pequeño"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/espacio_minimo"
+                        android:src="@drawable/ic_descripcion" />
+
+                    <TextView
+                        android:id="@+id/tdescripcion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/idescripcion"
+                        android:layout_toRightOf="@id/idescripcion"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorNegro" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tdescripcion"
+                        android:layout_marginTop="@dimen/espacio_minimo"
+                        android:layout_toRightOf="@id/idescripcion"
+                        android:text="Descripcion"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorTextoInfo" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/restado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_marginTop="@dimen/espacio_normal">
+
+                    <ImageView
+                        android:id="@+id/iestado"
+                        android:layout_width="@dimen/icono_pequeño"
+                        android:layout_height="@dimen/icono_pequeño"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/espacio_minimo"
+                        android:src="@drawable/ic_estado" />
+
+                    <TextView
+                        android:id="@+id/testado"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/iestado"
+                        android:layout_toRightOf="@id/iestado"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorNegro" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/testado"
+                        android:layout_marginTop="@dimen/espacio_minimo"
+                        android:layout_toRightOf="@id/iestado"
+                        android:text="Estado"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorTextoInfo" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/roperario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_marginTop="@dimen/espacio_normal">
+
+                    <ImageView
+                        android:id="@+id/ioperario"
+                        android:layout_width="@dimen/icono_pequeño"
+                        android:layout_height="@dimen/icono_pequeño"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/espacio_minimo"
+                        android:src="@drawable/ic_operario"
+                        app:tint="@color/colorIcono"/>
+
+                    <TextView
+                        android:id="@+id/toperario"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/ioperario"
+                        android:layout_toRightOf="@id/ioperario"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorNegro" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/toperario"
+                        android:layout_marginTop="@dimen/espacio_minimo"
+                        android:layout_toRightOf="@id/ioperario"
+                        android:text="Operario"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorTextoInfo" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/espacio_normal"
+    tools:context=".ui.perfil.EditarPerfilFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bguardar"
+        android:isScrollContainer="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/icono_grande"
+                android:layout_height="@dimen/icono_grande"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:src="@drawable/ic_perfil"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilpnombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:hint="Primer nombre"
+                app:startIconDrawable="@drawable/ic_nombre"
+                app:startIconContentDescription="Primer nombre"
+                app:endIconMode="clear_text"
+                android:padding="@dimen/espacio_minimo"
+                android:gravity="center">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiepnombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="textPersonName"
+                    android:selectAllOnFocus="true"
+                    android:maxLength="30"
+                    android:textColor="@color/colorPrimary"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilsnombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:hint="Segundo nombre"
+                app:startIconDrawable="@drawable/ic_nombre"
+                app:startIconContentDescription="Segundo nombre"
+                app:endIconMode="clear_text"
+                android:padding="@dimen/espacio_minimo"
+                android:gravity="center">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiesnombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="textPersonName"
+                    android:selectAllOnFocus="true"
+                    android:maxLength="30"
+                    android:textColor="@color/colorPrimary"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilpapellido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:hint="Primer apellido"
+                app:startIconDrawable="@drawable/ic_nombre"
+                app:startIconContentDescription="Primer apellido"
+                app:endIconMode="clear_text"
+                android:padding="@dimen/espacio_minimo"
+                android:gravity="center">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiepapellido"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="textPersonName"
+                    android:selectAllOnFocus="true"
+                    android:maxLength="30"
+                    android:textColor="@color/colorPrimary"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilsapellido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:hint="Segundo apellido"
+                app:startIconDrawable="@drawable/ic_nombre"
+                app:startIconContentDescription="Segundo apellido"
+                app:endIconMode="clear_text"
+                android:padding="@dimen/espacio_minimo"
+                android:gravity="center">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiesapellido"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="textPersonName"
+                    android:selectAllOnFocus="true"
+                    android:maxLength="30"
+                    android:textColor="@color/colorPrimary"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilcelular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:hint="Celular"
+                app:startIconDrawable="@drawable/ic_nombre"
+                app:startIconContentDescription="Celular"
+                app:endIconMode="clear_text"
+                android:padding="@dimen/espacio_minimo"
+                android:gravity="center">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiecelular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="number"
+                    android:digits="0123456789"
+                    android:selectAllOnFocus="true"
+                    android:maxLength="10"
+                    android:textColor="@color/colorPrimary"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tildireccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:hint="Dirección"
+                app:startIconDrawable="@drawable/ic_nombre"
+                app:startIconContentDescription="Dirección"
+                app:endIconMode="clear_text"
+                android:padding="@dimen/espacio_minimo"
+                android:gravity="center">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiedireccion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="textPostalAddress"
+                    android:selectAllOnFocus="true"
+                    android:maxLength="50"
+                    android:textColor="@color/colorPrimary"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilemail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:hint="Correo electrónico"
+                app:startIconDrawable="@drawable/ic_nombre"
+                app:startIconContentDescription="Correo electrónico"
+                app:endIconMode="clear_text"
+                android:padding="@dimen/espacio_minimo"
+                android:gravity="center">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tieemail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="textEmailAddress"
+                    android:selectAllOnFocus="true"
+                    android:maxLength="50"
+                    android:textColor="@color/colorPrimary"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilfechan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:hint="Fecha de nacimiento"
+                app:startIconDrawable="@drawable/ic_fecha"
+                app:startIconContentDescription="Fecha de nacimiento"
+                app:endIconMode="none"
+                android:padding="@dimen/espacio_minimo"
+                android:gravity="center">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiefechan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:textIsSelectable="false"
+                    android:textColor="@color/colorPrimary"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Spinner
+                android:id="@+id/spais"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_minimo"
+                android:popupBackground="@color/colorBlanco"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:background="@drawable/fondo_spiner"/>
+
+            <Spinner
+                android:id="@+id/sestado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_minimo"
+                android:popupBackground="@color/colorBlanco"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:background="@drawable/fondo_spiner"/>
+
+            <Spinner
+                android:id="@+id/sciudad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_minimo"
+                android:popupBackground="@color/colorBlanco"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:background="@drawable/fondo_spiner"/>
+
+
+            <LinearLayout
+                android:id="@+id/lgenero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/espacio_minimo"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Genero"/>
+
+                <RadioGroup
+                    android:id="@+id/rgrupo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/espacio_minimo"
+                    android:padding="@dimen/espacio_minimo"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Masculino"
+                        android:textColor="@color/colorPrimary"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:foreground="?android:attr/selectableItemBackground"/>
+
+                    <RadioButton
+                        android:id="@+id/rb2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/espacio_minimo"
+                        android:text="Femenino"
+                        android:textColor="@color/colorPrimary"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:foreground="?android:attr/selectableItemBackground"/>
+
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+
+
+            <!--
+            <LinearLayout
+                android:id="@+id/lfechan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/espacio_normal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="cumpleaños"/>
+
+
+                <LinearLayout
+                    android:id="@+id/lfechacumple"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="@dimen/espacio_minimo"
+                    android:padding="@dimen/espacio_minimo"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+
+                    <TextView
+                        android:id="@+id/tfechan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="dia/mes/año"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorPrimary"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        -->
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/bguardar"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/espacio_minimo"
+        android:background="@drawable/fondo_boton"
+        android:padding="@dimen/espacio_minimo"
+        android:text="Guardar"
+        android:textAllCaps="false"
+        android:textColor="@color/colorBlanco"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+</RelativeLayout>
+
+</FrameLayout>

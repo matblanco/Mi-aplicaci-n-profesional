@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_inicio">
+
+    <fragment
+        android:id="@+id/id_frame_login"
+        android:name="com.ingelecron.proyectoandroid.ui.login.LoginFragment"
+        android:label="@string/titulo_login"
+        tools:layout="@layout/frame_login">
+        <action
+            android:id="@+id/action_id_frame_login_to_id_frame_olvido"
+            app:destination="@id/id_frame_olvido_contra"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_id_frame_login_to_id_frame_tipo_registro"
+            app:destination="@id/id_frame_tipo_registro"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_id_frame_login_to_nav_inicio"
+            app:destination="@id/nav_inicio"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/id_frame_tipo_registro"
+        android:name="com.ingelecron.proyectoandroid.ui.regsitro.TipoRegistroFragment"
+        android:label="@string/titulo_registro"
+        tools:layout="@layout/frame_tipo_registro" >
+        <action
+            android:id="@+id/action_id_frame_tipo_registro_to_id_frame_registro_uno"
+            app:destination="@id/id_frame_registro_uno"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/id_frame_registro_uno"
+        android:name="com.ingelecron.proyectoandroid.ui.regsitro.RegistroUnoFragment"
+        android:label="@string/titulo_registro"
+        tools:layout="@layout/frame_registro_uno" >
+        <action
+            android:id="@+id/action_id_frame_registro_uno_to_id_frame_registro_dos"
+            app:destination="@id/id_frame_registro_dos"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/id_frame_registro_dos"
+        android:name="com.ingelecron.proyectoandroid.ui.regsitro.RegistroDosFragment"
+        android:label="@string/titulo_registro"
+        tools:layout="@layout/frame_registro_dos" >
+        <action
+            android:id="@+id/action_id_frame_registro_dos_to_nav_inicio"
+            app:destination="@id/nav_inicio"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_inicio"
+        android:name="com.ingelecron.proyectoandroid.ui.inicio.InicioFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/frame_inicio" >
+        <action
+            android:id="@+id/action_nav_inicio_to_id_frame_inicio_empresa"
+            app:destination="@id/id_frame_inicio_empresa"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_nav_inicio_to_id_frame_inicio_operario"
+            app:destination="@id/id_frame_inicio_operador"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/id_frame_inicio_operador"
+        android:name="com.ingelecron.proyectoandroid.ui.inicio.InicioOperadorFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/frame_inicio_operador" >
+
+        <action
+            android:id="@+id/action_id_frame_inicio_operador_to_id_frame_ordenes"
+            app:destination="@id/id_frame_ordenes"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+        <action
+            android:id="@+id/action_id_frame_inicio_operador_to_id_frame_ventas"
+            app:destination="@id/id_frame_ventas"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+        <action
+            android:id="@+id/action_id_frame_inicio_operador_to_id_frame_mimaquina"
+            app:destination="@id/id_frame_mimaquina"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+        <action
+            android:id="@+id/action_id_frame_inicio_operador_to_id_frame_clientes"
+            app:destination="@id/id_frame_clientes"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/id_frame_inicio_empresa"
+        android:name="com.ingelecron.proyectoandroid.ui.inicio.InicioEmpresaFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/frame_inicio_empresa" >
+
+        <action
+            android:id="@+id/action_id_frame_inicio_empresa_to_id_nav_ventas"
+            app:destination="@id/nav_ventas"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_ventas"
+        android:name="com.ingelecron.proyectoandroid.ui.ventas.VentasFragment"
+        android:label="@string/menu_ventas"
+        tools:layout="@layout/frame_ventas">
+        <action
+            android:id="@+id/action_nav_ventas_to_id_frame_ver_ventas"
+            app:destination="@id/id_frame_ver_ventas"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_nav_ventas_to_id_frame_ver_facturas"
+            app:destination="@id/id_frame_ver_facturas"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/id_frame_ventas"
+        android:name="com.ingelecron.proyectoandroid.ui.ventas.VentasFragment"
+        android:label="@string/menu_ventas"
+        tools:layout="@layout/frame_ventas">
+        <action
+            android:id="@+id/action_id_frame_ventas_to_id_frame_ver_ventas"
+            app:destination="@id/id_frame_ver_ventas"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_id_frame_ventas_to_id_frame_ver_facturas"
+            app:destination="@id/id_frame_ver_facturas"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/id_frame_ver_ventas"
+        android:name="com.ingelecron.proyectoandroid.ui.ventas.VerVentaFragment"
+        android:label="@string/titulo_venta"
+        tools:layout="@layout/frame_ver_venta">
+        <action
+            android:id="@+id/action_id_frame_ver_ventas_actualizar"
+            app:destination="@id/id_frame_ver_ventas"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/id_frame_ver_ventas"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/id_frame_ver_facturas"
+        android:name="com.ingelecron.proyectoandroid.ui.facturas.VerFacturaFragment"
+        android:label="@string/menu_facturas"
+        tools:layout="@layout/frame_ver_factura"/>
+
+
+    <fragment
+        android:id="@+id/nav_ordenes"
+        android:name="com.ingelecron.proyectoandroid.ui.ordenes.OrdenFragment"
+        android:label="@string/menu_ordenes"
+        tools:layout="@layout/frame_orden" >
+        <action
+            android:id="@+id/action_nav_ordenes_to_id_frame_crear_orden"
+            app:destination="@id/id_frame_crear_orden"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_nav_ordenes_to_id_frame_ver_orden"
+            app:destination="@id/id_frame_ver_orden"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_nav_ordenes_to_id_frame_ver_trabajos"
+            app:destination="@id/id_frame_ver_trabajos"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/id_frame_ordenes"
+        android:name="com.ingelecron.proyectoandroid.ui.ordenes.OrdenFragment"
+        android:label="@string/menu_ordenes"
+        tools:layout="@layout/frame_orden" >
+        <action
+            android:id="@+id/action_id_frame_ordenes_to_id_frame_crear_orden"
+            app:destination="@id/id_frame_crear_orden"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_id_frame_ordenes_to_id_frame_ver_orden"
+            app:destination="@id/id_frame_ver_orden"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_id_frame_ordenes_to_id_frame_ver_trabajos"
+            app:destination="@id/id_frame_ver_trabajos"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/id_frame_crear_orden"
+        android:name="com.ingelecron.proyectoandroid.ui.ordenes.CrearOrdenFragment"
+        android:label="@string/titulo_crear"
+        tools:layout="@layout/frame_crear_orden" />
+
+    <fragment
+        android:id="@+id/id_frame_ver_orden"
+        android:name="com.ingelecron.proyectoandroid.ui.ordenes.VerOrdenFragment"
+        android:label="@string/titulo_orden"
+        tools:layout="@layout/frame_ver_orden" >
+        <action
+            android:id="@+id/action_id_frame_ver_orden_actualizar"
+            app:destination="@id/id_frame_ver_orden"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/id_frame_ver_orden"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/id_frame_ver_trabajos"
+        android:name="com.ingelecron.proyectoandroid.ui.trabajos.VerTrabajosFragment"
+        android:label="@string/titulo_trabajos"
+        tools:layout="@layout/frame_ver_trabajos" >
+        <action
+            android:id="@+id/action_id_frame_ver_trabajos_actualizar"
+            app:destination="@id/id_frame_ver_trabajos"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/id_frame_ver_trabajos"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_clientes"
+        android:name="com.ingelecron.proyectoandroid.ui.clientes.ClienteFragment"
+        android:label="@string/menu_clientes"
+        tools:layout="@layout/frame_cliente" >
+        <action
+            android:id="@+id/action_nav_clientes_to_id_frame_crear_cliente"
+            app:destination="@id/id_frame_crear_cliente"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/id_frame_clientes"
+        android:name="com.ingelecron.proyectoandroid.ui.clientes.ClienteFragment"
+        android:label="@string/menu_clientes"
+        tools:layout="@layout/frame_cliente" >
+        <action
+            android:id="@+id/action_id_frame_clientes_to_id_frame_crear_cliente"
+            app:destination="@id/id_frame_crear_cliente"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_id_frame_clientes_actualizar"
+            app:destination="@id/id_frame_clientes"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/id_frame_clientes"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/id_frame_crear_cliente"
+        android:name="com.ingelecron.proyectoandroid.ui.clientes.CrearClienteFragment"
+        android:label="@string/titulo_crear"
+        tools:layout="@layout/frame_crear_cliente" />
+
+    <fragment
+        android:id="@+id/nav_operador"
+        android:name="com.ingelecron.proyectoandroid.ui.operador.OperadorFragment"
+        android:label="@string/menu_operadores"
+        tools:layout="@layout/frame_operador" >
+        <action
+            android:id="@+id/action_nav_operador_actualizar"
+            app:destination="@id/nav_operador"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/nav_operador"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_maquinas"
+        android:name="com.ingelecron.proyectoandroid.ui.maquinas.MaquinaFragment"
+        android:label="@string/menu_maquinas"
+        tools:layout="@layout/frame_maquina" >
+        <action
+            android:id="@+id/action_nav_maquinas_to_id_frame_crear_maquina"
+            app:destination="@id/id_frame_crear_maquina"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_nav_maquinas_to_id_frame_ver_maquina"
+            app:destination="@id/id_frame_ver_maquina"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/id_frame_crear_maquina"
+        android:name="com.ingelecron.proyectoandroid.ui.maquinas.CrearMaquinaFragment"
+        android:label="@string/titulo_crear"
+        tools:layout="@layout/frame_crear_maquina" />
+
+    <fragment
+        android:id="@+id/id_frame_ver_maquina"
+        android:name="com.ingelecron.proyectoandroid.ui.maquinas.VerMaquinaFragment"
+        android:label="@string/titulo_maquina"
+        tools:layout="@layout/frame_ver_maquina">
+        <action
+            android:id="@+id/action_id_frame_ver_maquina_actualizar"
+            app:destination="@id/id_frame_ver_maquina"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/id_frame_ver_maquina"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/id_frame_mimaquina"
+        android:name="com.ingelecron.proyectoandroid.ui.maquinas.MiMaquina"
+        android:label="@string/titulo_maquina"
+        tools:layout="@layout/frame_mi_maquina" >
+        <action
+            android:id="@+id/action_id_frame_mimaquina_actualizar"
+            app:destination="@id/id_frame_mimaquina"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/id_frame_mimaquina"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_servicios"
+        android:name="com.ingelecron.proyectoandroid.ui.servicios.ServiciosFragment"
+        android:label="@string/menu_servicios"
+        tools:layout="@layout/frame_servicios" >
+        <action
+            android:id="@+id/action_nav_servicios_to_id_frame_crear_servicio"
+            app:destination="@id/id_frame_crear_servicio"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/id_frame_crear_servicio"
+        android:name="com.ingelecron.proyectoandroid.ui.servicios.CrearServicioFragment"
+        android:label="@string/titulo_crear"
+        tools:layout="@layout/frame_crear_servicio" />
+
+
+    <fragment
+        android:id="@+id/nav_perfil"
+        android:name="com.ingelecron.proyectoandroid.ui.perfil.PerfilFragment"
+        android:label="@string/menu_perfil"
+        tools:layout="@layout/frame_perfil" >
+        <action
+            android:id="@+id/action_nav_perfil_to_id_frame_editar_perfil"
+            app:destination="@id/id_frame_editar_perfil"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_nav_perfil_to_id_frame_cambiar_contra"
+            app:destination="@id/id_frame_cambiar_contra"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_nav_perfil_to_id_frame_login"
+            app:destination="@id/id_frame_login"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/id_frame_perfil"
+        android:name="com.ingelecron.proyectoandroid.ui.perfil.PerfilFragment"
+        android:label="@string/menu_perfil"
+        tools:layout="@layout/frame_perfil" >
+        <action
+            android:id="@+id/action_id_frame_perfil_to_id_frame_editar_perfil"
+            app:destination="@id/id_frame_editar_perfil"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_id_frame_perfil_to_id_frame_cambiar_contra"
+            app:destination="@id/id_frame_cambiar_contra"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_id_frame_perfil_to_id_frame_preferencias"
+            app:destination="@id/id_frame_preferencias"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_id_frame_perfil_to_id_frame_login"
+            app:destination="@id/id_frame_login"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/id_frame_editar_perfil"
+        android:name="com.ingelecron.proyectoandroid.ui.perfil.EditarPerfilFragment"
+        android:label="@string/titulo_editar"
+        tools:layout="@layout/frame_editar_perfil" />
+
+    <fragment
+        android:id="@+id/id_frame_olvido_contra"
+        android:name="com.ingelecron.proyectoandroid.ui.contraseña.OlvidoContraFragment"
+        android:label="@string/titulo_recuperar"
+        tools:layout="@layout/frame_olvido_contra" />
+
+    <fragment
+        android:id="@+id/id_frame_cambiar_contra"
+        android:name="com.ingelecron.proyectoandroid.ui.contraseña.CambiarContraFragment"
+        android:label="@string/titulo_cambiar"
+        tools:layout="@layout/frame_cambiar_contra" />
+
+
+    <fragment
+        android:id="@+id/id_frame_preferencias"
+        android:name="com.ingelecron.proyectoandroid.ui.configuracion.Preferencias"
+        android:label="@string/titulo_confi"/>
+
+    <fragment
+        android:id="@+id/id_frame_ayuda"
+        android:name="com.ingelecron.proyectoandroid.ui.ayuda.AyudaFragment"
+        android:label="@string/menu_ayuda"
+        tools:layout="@layout/frame_ayuda" />
+
+
+
+</navigation>

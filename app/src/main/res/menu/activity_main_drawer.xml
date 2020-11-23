@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_inicio">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_ventas"
+            android:icon="@drawable/ic_venta"
+            android:title="@string/menu_ventas" />
+
+        <item
+            android:id="@+id/nav_ordenes"
+            android:icon="@drawable/ic_orden"
+            android:title="@string/menu_ordenes" />
+
+        <item
+            android:id="@+id/nav_clientes"
+            android:icon="@drawable/ic_clientes"
+            android:title="@string/menu_clientes" />
+        <item
+            android:id="@+id/nav_maquinas"
+            android:icon="@drawable/ic_logo_blanco"
+            android:title="@string/menu_maquinas" />
+        <item
+            android:id="@+id/nav_operador"
+            android:icon="@drawable/ic_operario"
+            android:title="@string/menu_operadores" />
+        <item
+            android:id="@+id/nav_servicios"
+            android:icon="@drawable/ic_servicios"
+            android:title="@string/menu_servicios" />
+
+        <item
+            android:id="@+id/nav_perfil"
+            android:icon="@drawable/ic_perfil2"
+            android:title="@string/menu_perfil" />
+    </group>
+
+</menu>

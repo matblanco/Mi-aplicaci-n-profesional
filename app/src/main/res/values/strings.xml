@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">ProAgri</string>
+    <string name="navigation_drawer_open">Abrir</string>
+    <string name="navigation_drawer_close">Cerrar</string>
+    <string name="nav_header_title">Empresa</string>
+    <string name="nav_header_subtitle">ProAgri</string>
+    <string name="nav_header_desc">logo magroa</string>
+
+    <string name="menu_inicio">Inicio</string>
+    <string name="menu_mensajes">Mensajes</string>
+    <string name="menu_ingresos">Ingresos</string>
+    <string name="menu_facturas">Facturas</string>
+    <string name="menu_ventas">Ventas</string>
+    <string name="menu_ordenes">Ordenes</string>
+    <string name="menu_clientes">Clientes</string>
+    <string name="menu_maquinas">Máquinas</string>
+    <string name="menu_operadores">Operadores</string>
+    <string name="menu_servicios">Servicios</string>
+    <string name="menu_perfil">Perfil</string>
+
+    <string name="titulo_recuperar">Recuperar</string>
+    <string name="titulo_confi">Configuración</string>
+    <string name="titulo_cambiar">Cambiar</string>
+    <string name="titulo_editar">Editar</string>
+
+    <string name="titulo_login">Login</string>
+    <string name="titulo_registro">Registrar</string>
+    <string name="titulo_agregar">Agregar</string>
+    <string name="titulo_crear">Crear</string>
+    <string name="titulo_ver">Ver</string>
+
+    <string name="titulo_servicio">Servicio</string>
+    <string name="titulo_operador">Operador</string>
+    <string name="titulo_maquina">Máquina</string>
+    <string name="tituloo_cliente">Cliente</string>
+    <string name="titulo_orden">Orden</string>
+    <string name="titulo_trabajos">Trabajos</string>
+    <string name="titulo_venta">Venta</string>
+    <string name="titulo_ingreso">Ingreso</string>
+    <string name="titulo_mensaje">Mensaje</string>
+
+    <string name="menu_ayuda">Ayuda</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

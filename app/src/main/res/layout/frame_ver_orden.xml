@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/espacio_normal"
+    tools:context=".ui.ordenes.VerOrdenFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bsiguiente"
+            android:isScrollContainer="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:id="@+id/lfoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iperfil"
+                        android:layout_width="@dimen/icono_mediano"
+                        android:layout_height="@dimen/icono_mediano"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:elevation="@dimen/espacio_minimo"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_orden" />
+
+                    <LinearLayout
+                        android:id="@+id/lfecha"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/espacio_minimo"
+                        android:layout_toRightOf="@+id/iperfil"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="No. "
+                                android:textColor="@color/colorTextoInfo" />
+
+                            <TextView
+                                android:id="@+id/tnumero"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                android:textColor="@color/colorNegro" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tfecha"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text=""
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorNegro" />
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimary"
+                    android:layout_marginTop="@dimen/espacio_normal"
+                    android:layout_marginBottom="@dimen/espacio_normal"/>
+
+
+                <Spinner
+                    android:id="@+id/slista"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:popupBackground="@color/colorBlanco"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:background="@drawable/fondo_spiner"
+                    android:gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/espacio_normal"/>
+
+                <RelativeLayout
+                    android:id="@+id/rcliente"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground">
+
+                    <ImageView
+                        android:id="@+id/icliente"
+                        android:layout_width="@dimen/icono_pequeño"
+                        android:layout_height="@dimen/icono_pequeño"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/espacio_minimo"
+                        android:src="@drawable/ic_clientes2" />
+
+                    <TextView
+                        android:id="@+id/tcliente"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/icliente"
+                        android:layout_toRightOf="@id/icliente"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorNegro" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tcliente"
+                        android:layout_marginTop="@dimen/espacio_minimo"
+                        android:layout_toRightOf="@id/icliente"
+                        android:text="Cliente"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorTextoInfo" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_marginTop="@dimen/espacio_normal">
+
+                    <ImageView
+                        android:id="@+id/ilugar"
+                        android:layout_width="@dimen/icono_pequeño"
+                        android:layout_height="@dimen/icono_pequeño"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/espacio_minimo"
+                        android:src="@drawable/ic_ubicacion" />
+
+                    <TextView
+                        android:id="@+id/tlugar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/ilugar"
+                        android:layout_toRightOf="@id/ilugar"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorNegro" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tlugar"
+                        android:layout_marginTop="@dimen/espacio_minimo"
+                        android:layout_toRightOf="@id/ilugar"
+                        android:text="Lugar"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorTextoInfo" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rdireccion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_marginTop="@dimen/espacio_normal">
+
+                    <ImageView
+                        android:id="@+id/idireccion"
+                        android:layout_width="@dimen/icono_pequeño"
+                        android:layout_height="@dimen/icono_pequeño"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/espacio_minimo"
+                        android:src="@drawable/ic_direccion" />
+
+                    <TextView
+                        android:id="@+id/tdireccion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/idireccion"
+                        android:layout_toRightOf="@id/idireccion"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorNegro" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tdireccion"
+                        android:layout_marginTop="@dimen/espacio_minimo"
+                        android:layout_toRightOf="@id/idireccion"
+                        android:text="Dirección"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorTextoInfo" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rcelular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_marginTop="@dimen/espacio_normal">
+
+                    <ImageView
+                        android:id="@+id/icelular"
+                        android:layout_width="@dimen/icono_pequeño"
+                        android:layout_height="@dimen/icono_pequeño"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/espacio_minimo"
+                        android:src="@drawable/ic_celular"
+                        app:tint="@color/colorIcono"/>
+
+                    <TextView
+                        android:id="@+id/tcelular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/icelular"
+                        android:layout_toRightOf="@id/icelular"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorNegro" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tcelular"
+                        android:layout_marginTop="@dimen/espacio_minimo"
+                        android:layout_toRightOf="@id/icelular"
+                        android:text="Celular"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorTextoInfo" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_marginTop="@dimen/espacio_normal">
+
+                    <ImageView
+                        android:id="@+id/iservicio"
+                        android:layout_width="@dimen/icono_pequeño"
+                        android:layout_height="@dimen/icono_pequeño"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/espacio_minimo"
+                        android:src="@drawable/ic_servicios2" />
+
+                    <TextView
+                        android:id="@+id/tservicio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/iservicio"
+                        android:layout_toRightOf="@id/iservicio"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorNegro" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tservicio"
+                        android:layout_marginTop="@dimen/espacio_minimo"
+                        android:layout_toRightOf="@id/iservicio"
+                        android:text="Servicio"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorTextoInfo" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rprecio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_marginTop="@dimen/espacio_normal">
+
+                    <ImageView
+                        android:id="@+id/iprecio"
+                        android:layout_width="@dimen/icono_pequeño"
+                        android:layout_height="@dimen/icono_pequeño"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/espacio_minimo"
+                        android:src="@drawable/ic_ingresos"
+                        app:tint="@color/colorIcono"/>
+
+                    <TextView
+                        android:id="@+id/tprecio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/iprecio"
+                        android:layout_toRightOf="@id/iprecio"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorNegro" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tprecio"
+                        android:layout_marginTop="@dimen/espacio_minimo"
+                        android:layout_toRightOf="@id/iprecio"
+                        android:text="Valor"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorTextoInfo" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rmaquina"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_marginTop="@dimen/espacio_normal">
+
+                    <ImageView
+                        android:id="@+id/imaquina"
+                        android:layout_width="@dimen/icono_pequeño"
+                        android:layout_height="@dimen/icono_pequeño"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/espacio_minimo"
+                        android:src="@drawable/ic_logo_blanco"
+                        app:tint="@color/colorIcono"/>
+
+                    <TextView
+                        android:id="@+id/tmaquina"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/imaquina"
+                        android:layout_toRightOf="@id/imaquina"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorNegro"  />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tmaquina"
+                        android:layout_marginTop="@dimen/espacio_minimo"
+                        android:layout_toRightOf="@id/imaquina"
+                        android:text="Máquina"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorTextoInfo" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/roperario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_marginTop="@dimen/espacio_normal">
+
+                    <ImageView
+                        android:id="@+id/ioperario"
+                        android:layout_width="@dimen/icono_pequeño"
+                        android:layout_height="@dimen/icono_pequeño"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/espacio_minimo"
+                        android:src="@drawable/ic_operario"
+                        app:tint="@color/colorIcono"/>
+
+                    <TextView
+                        android:id="@+id/toperario"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/ioperario"
+                        android:layout_toRightOf="@id/ioperario"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorNegro" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/toperario"
+                        android:layout_marginTop="@dimen/espacio_minimo"
+                        android:layout_toRightOf="@id/ioperario"
+                        android:text="Operario"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorTextoInfo" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rproceso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_marginTop="@dimen/espacio_normal">
+
+                    <ImageView
+                        android:id="@+id/iproceso"
+                        android:layout_width="@dimen/icono_pequeño"
+                        android:layout_height="@dimen/icono_pequeño"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/espacio_minimo"
+                        android:src="@drawable/ic_estado"
+                        app:tint="@color/colorIcono"/>
+
+                    <TextView
+                        android:id="@+id/tproceso"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/iproceso"
+                        android:layout_toRightOf="@id/iproceso"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorNegro" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tproceso"
+                        android:layout_marginTop="@dimen/espacio_minimo"
+                        android:layout_toRightOf="@id/iproceso"
+                        android:text="Proceso"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorTextoInfo" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+</FrameLayout>

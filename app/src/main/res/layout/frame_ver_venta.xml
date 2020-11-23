@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/espacio_normal"
+    tools:context=".ui.ventas.VerVentaFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/beditar"
+            android:isScrollContainer="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:id="@+id/lfoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iperfil"
+                        android:layout_width="@dimen/icono_mediano"
+                        android:layout_height="@dimen/icono_mediano"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:elevation="@dimen/espacio_minimo"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_venta" />
+
+                    <LinearLayout
+                        android:id="@+id/lfecha"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/espacio_minimo"
+                        android:layout_toRightOf="@+id/iperfil"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="No. "
+                                android:textColor="@color/colorTextoInfo" />
+
+                            <TextView
+                                android:id="@+id/tnumero"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                android:textColor="@color/colorNegro" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tfecha"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text=""
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorNegro" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tcobrar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/lfecha"
+                        android:layout_alignBottom="@+id/lfecha"
+                        android:gravity="center_vertical"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="Facturar"
+                        android:padding="8dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorPrimary"
+                        android:clickable="true"
+                        android:background="?attr/selectableItemBackground"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimary"
+                    android:layout_marginTop="@dimen/espacio_normal"
+                    android:layout_marginBottom="@dimen/espacio_normal"/>
+
+
+                <RelativeLayout
+                    android:id="@+id/rhoras"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground">
+
+                    <ImageView
+                        android:id="@+id/ihoras"
+                        android:layout_width="@dimen/icono_pequeño"
+                        android:layout_height="@dimen/icono_pequeño"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/espacio_minimo"
+                        android:src="@drawable/ic_horas"
+                        app:tint="@color/colorIcono"/>
+
+                    <TextView
+                        android:id="@+id/thoras"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/ihoras"
+                        android:layout_toRightOf="@id/ihoras"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorNegro" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/thoras"
+                        android:layout_marginTop="@dimen/espacio_minimo"
+                        android:layout_toRightOf="@id/ihoras"
+                        android:text="Horas"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorTextoInfo" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rprecio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_marginTop="@dimen/espacio_normal">
+
+                    <ImageView
+                        android:id="@+id/iprecio"
+                        android:layout_width="@dimen/icono_pequeño"
+                        android:layout_height="@dimen/icono_pequeño"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/espacio_minimo"
+                        android:src="@drawable/ic_ingresos"
+                        app:tint="@color/colorIcono"/>
+
+                    <TextView
+                        android:id="@+id/tprecio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/iprecio"
+                        android:layout_toRightOf="@id/iprecio"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorNegro" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tprecio"
+                        android:layout_marginTop="@dimen/espacio_minimo"
+                        android:layout_toRightOf="@id/iprecio"
+                        android:text="Precio"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorTextoInfo" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rdescuento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_marginTop="@dimen/espacio_normal">
+
+                    <ImageView
+                        android:id="@+id/idescuento"
+                        android:layout_width="@dimen/icono_pequeño"
+                        android:layout_height="@dimen/icono_pequeño"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/espacio_minimo"
+                        android:src="@drawable/ic_descuento"
+                        app:tint="@color/colorIcono"/>
+
+                    <EditText
+                        android:id="@+id/edescuento"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="0123456789"
+                        android:layout_toEndOf="@id/idescuento"
+                        android:layout_toRightOf="@id/idescuento"
+                        android:hint=""
+                        android:inputType="number"
+                        android:selectAllOnFocus="true"
+                        android:textColor="@color/colorPrimary"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/edescuento"
+                        android:layout_marginTop="@dimen/espacio_minimo"
+                        android:layout_toRightOf="@id/idescuento"
+                        android:text="Descuento"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorTextoInfo" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rabono"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_marginTop="@dimen/espacio_normal">
+
+                    <ImageView
+                        android:id="@+id/iabono"
+                        android:layout_width="@dimen/icono_pequeño"
+                        android:layout_height="@dimen/icono_pequeño"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/espacio_minimo"
+                        android:src="@drawable/ic_abono"
+                        app:tint="@color/colorIcono"/>
+
+                    <EditText
+                        android:id="@+id/eabono"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="0123456789"
+                        android:layout_toEndOf="@id/iabono"
+                        android:layout_toRightOf="@id/iabono"
+                        android:hint=""
+                        android:inputType="number"
+                        android:selectAllOnFocus="true"
+                        android:textColor="@color/colorPrimary"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/eabono"
+                        android:layout_marginTop="@dimen/espacio_minimo"
+                        android:layout_toRightOf="@id/iabono"
+                        android:text="Abono"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorTextoInfo" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rsaldo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_marginTop="@dimen/espacio_normal">
+
+                    <ImageView
+                        android:id="@+id/isaldo"
+                        android:layout_width="@dimen/icono_pequeño"
+                        android:layout_height="@dimen/icono_pequeño"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/espacio_minimo"
+                        android:src="@drawable/ic_saldo"
+                        app:tint="@color/colorIcono"/>
+
+                    <TextView
+                        android:id="@+id/tsaldo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/isaldo"
+                        android:layout_toRightOf="@id/isaldo"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorNegro" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tsaldo"
+                        android:layout_marginTop="@dimen/espacio_minimo"
+                        android:layout_toRightOf="@id/isaldo"
+                        android:text="Saldo"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorTextoInfo" />
+
+                </RelativeLayout>
+
+                <Spinner
+                    android:id="@+id/slista"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espacio_minimo"
+                    android:popupBackground="@color/colorBlanco"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:background="@drawable/fondo_spiner"/>
+
+
+                <RelativeLayout
+                    android:id="@+id/rproceso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_marginTop="@dimen/espacio_normal">
+
+                    <ImageView
+                        android:id="@+id/iproceso"
+                        android:layout_width="@dimen/icono_pequeño"
+                        android:layout_height="@dimen/icono_pequeño"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/espacio_minimo"
+                        android:src="@drawable/ic_estado"
+                        app:tint="@color/colorIcono"/>
+
+                    <TextView
+                        android:id="@+id/tproceso"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/iproceso"
+                        android:layout_toRightOf="@id/iproceso"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorNegro" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tproceso"
+                        android:layout_marginTop="@dimen/espacio_minimo"
+                        android:layout_toRightOf="@id/iproceso"
+                        android:text="Proceso"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorTextoInfo" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+        <Button
+            android:id="@+id/beditar"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/espacio_minimo"
+            android:background="@drawable/fondo_boton"
+            android:padding="@dimen/espacio_minimo"
+            android:text="Editar"
+            android:textAllCaps="false"
+            android:textColor="@color/colorBlanco"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+    </RelativeLayout>
+
+
+
+</FrameLayout>

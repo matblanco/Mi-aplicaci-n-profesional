@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/espacio_normal"
+    tools:context=".ui.regsitro.RegistroDosFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bregistro"
+            android:isScrollContainer="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/rtitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iregistro"
+                        android:layout_width="@dimen/icono_pequeño"
+                        android:layout_height="@dimen/icono_pequeño"
+                        android:src="@drawable/ic_maquina" />
+
+                    <TextView
+                        android:id="@+id/ttitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/espacio_minimo"
+                        android:text="Nuevo Usuario"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorTextoTitulo" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lclave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espacio_normal"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/ecelular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="0123456789"
+                        android:hint="Celular"
+                        android:inputType="number"
+                        android:padding="@dimen/espacio_minimo"
+                        android:selectAllOnFocus="true"
+                        android:maxLength="20"
+                        android:textColor="@color/colorPrimary"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+                    <EditText
+                        android:id="@+id/ecorreo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Correo electrónico"
+                        android:inputType="textEmailAddress"
+                        android:padding="@dimen/espacio_minimo"
+                        android:layout_marginTop="@dimen/espacio_minimo"
+                        android:selectAllOnFocus="true"
+                        android:maxLength="50"
+                        android:textColor="@color/colorPrimary"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+
+                    <EditText
+                        android:id="@+id/ecedula"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="0123456789"
+                        android:hint="Cedula"
+                        android:inputType="number"
+                        android:padding="@dimen/espacio_minimo"
+                        android:layout_marginTop="@dimen/espacio_minimo"
+                        android:selectAllOnFocus="true"
+                        android:maxLength="20"
+                        android:textColor="@color/colorPrimary"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+                    <EditText
+                        android:id="@+id/enit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="0123456789"
+                        android:hint="NIT"
+                        android:inputType="number"
+                        android:padding="@dimen/espacio_minimo"
+                        android:layout_marginTop="@dimen/espacio_minimo"
+                        android:selectAllOnFocus="true"
+                        android:maxLength="20"
+                        android:textColor="@color/colorPrimary"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+                    <EditText
+                        android:id="@+id/eclave"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Contraseña"
+                        android:inputType="textPassword"
+                        android:padding="@dimen/espacio_minimo"
+                        android:layout_marginTop="@dimen/espacio_minimo"
+                        android:selectAllOnFocus="true"
+                        android:maxLength="20"
+                        android:textColor="@color/colorPrimary"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+
+                    <EditText
+                        android:id="@+id/erclave"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Confirme contraseña"
+                        android:inputType="textPassword"
+                        android:padding="@dimen/espacio_minimo"
+                        android:layout_marginTop="@dimen/espacio_minimo"
+                        android:selectAllOnFocus="true"
+                        android:maxLength="20"
+                        android:textColor="@color/colorPrimary"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+        <Button
+            android:id="@+id/bregistro"
+            android:layout_width="@dimen/boton_normal"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:padding="@dimen/espacio_minimo"
+            android:text="Registrar"
+            android:background="@drawable/fondo_boton"
+            android:textColor="@color/colorBlanco"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:foreground="?android:attr/selectableItemBackground"/>
+
+    </RelativeLayout>
+
+
+</FrameLayout>

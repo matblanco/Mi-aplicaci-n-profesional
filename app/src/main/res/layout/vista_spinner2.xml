@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/espacio_normal">
+
+    <RelativeLayout
+        android:id="@+id/rtitulo"
+        android:layout_width="match_parent"
+        android:layout_height="25dp">
+
+        <ImageView
+            android:id="@+id/ititulo"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_operario" />
+
+        <TextView
+            android:id="@+id/ttitulo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/espacio_minimo"
+            android:layout_toRightOf="@+id/ititulo"
+            android:gravity="center_vertical"
+            android:text="Agregar operador"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/colorTextoTitulo" />
+
+    </RelativeLayout>
+
+    <Spinner
+        android:id="@+id/slista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/espacio_minimo"
+        android:popupBackground="@color/colorBlanco"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:background="@drawable/fondo_spiner"/>
+
+</LinearLayout>
